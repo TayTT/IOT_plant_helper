@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
 FILE_PATH = 'feeds.csv'
 
 
@@ -91,7 +90,6 @@ def draw_corr(data):
 
 
 def draw_pairs(data, combined=True, pairs=True):
-
     daily_data = data.resample('D').mean()[1:]
 
     if combined or (not combined and not pairs):
@@ -113,9 +111,6 @@ def draw_pairs(data, combined=True, pairs=True):
         sns.pairplot(snippet, kind='scatter').fig.set_size_inches(10, 10)
         # plt.title("Temperature from humidity for sensor 3")
         plt.savefig('./img/Graph of temperature from humidity for sensor 3')
-
-
-
 
 
 if __name__ == "__main__":
